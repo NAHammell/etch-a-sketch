@@ -30,7 +30,7 @@ function clearGrid() {
 }
 
 function newGrid() {
-    gridSize = parseInt(prompt());
+    gridSize = prompt();
     if (gridSize <= 100) {
         clearGrid();
         createGrid(gridSize);
@@ -44,4 +44,4 @@ gridBtn.addEventListener('click', newGrid);
 colorBlack.addEventListener('click', colorset => {color = 'black'});
 colorRed.addEventListener('click', colorset => {color = 'red'});
 
-createGrid(64);
+createGrid(16);
