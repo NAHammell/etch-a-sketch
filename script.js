@@ -5,14 +5,16 @@ function createGrid(size) {
         const row = document.createElement('div');
         row.classList.add('row');
         sketchpad.appendChild(row);
-        
+
         for (let j = 0; j < size; j++) {
             const pixel = document.createElement('div');
             pixel.classList.add('pixel');
-            pixel.style = 'background-color: red;';
+            pixel.addEventListener('pointerover', function() {
+              this.style = 'background-color: red;';  
+            });
             row.appendChild(pixel);
         }
     }
 }
 
-createGrid(10);
+createGrid(64);
