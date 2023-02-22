@@ -1,8 +1,11 @@
 #sketchpad {
     display: flex;
     flex-direction: column;
-    width: 1000px;
-    height: 1000px;
+    width: 512px;
+    height: 512px;
+    background-color: rgb(245, 245, 245);
+    border: 4px solid lightgray;
+    border-radius: 2px;
 }
 
 .row {
