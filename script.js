@@ -1,6 +1,11 @@
 const sketchpad = document.querySelector('#sketchpad');
 const gridBtn = document.querySelector('#grid-gen');
 
+const colorBlack = document.querySelector('#black');
+const colorRed = document.querySelector('#red');
+
+let color = 'red';
+
 function createGrid(size) {
     for (let i = 0; i < size; i++) {
         const row = document.createElement('div');
@@ -11,7 +16,7 @@ function createGrid(size) {
             const pixel = document.createElement('div');
             pixel.classList.add('pixel');
             pixel.addEventListener('pointerover', function() {
-              this.style = 'background-color: red;';  
+              this.style = `background-color: ${color}`;  
             });
             row.appendChild(pixel);
         }
@@ -35,5 +40,8 @@ function newGrid() {
 }
 
 gridBtn.addEventListener('click', newGrid);
+
+colorBlack.addEventListener('click', colorset => {color = 'black'});
+colorRed.addEventListener('click', colorset => {color = 'red'});
 
 createGrid(64);
