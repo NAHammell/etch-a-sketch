@@ -3,6 +3,7 @@ const gridBtn = document.querySelector('#grid-gen');
 
 const colorBlack = document.querySelector('#black');
 const colorRed = document.querySelector('#red');
+const colorWhite = document.querySelector('#white');
 
 let color = 'red';
 
@@ -43,5 +44,6 @@ gridBtn.addEventListener('click', newGrid);
 
 colorBlack.addEventListener('click', colorset => {color = 'black'});
 colorRed.addEventListener('click', colorset => {color = 'red'});
+colorWhite.addEventListener('click', colorset => {color = 'rgb(240, 240, 240)'});
 
 createGrid(16);
